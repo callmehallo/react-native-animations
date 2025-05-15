@@ -64,9 +64,6 @@ const SplitFlapBase = ({
   }))
 
   useEffect(() => {
-    if (index === 0) {
-      console.log("index", index)
-    }
     rotateXTop.value = withDelay(
       DURATION * (totalSplitFlaps - index),
       withTiming(
