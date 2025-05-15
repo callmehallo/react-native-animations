@@ -12,7 +12,7 @@
       [
         "expo-font",
         {
-          "fonts": ["./src/assets/fonts/fonts/Roboto-Black.ttf"]
+          "fonts": ["./src/assets/fonts/Roboto-Black.ttf"]
         }
       ]
     ],
