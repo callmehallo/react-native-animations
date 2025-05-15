@@ -1,7 +1,8 @@
-export const CARD_HEIGHT = 300
-export const VERTICAL_OFFSET = 20
+export const FLAP_HEIGHT = 60
+export const FLAP_WIDTH = FLAP_HEIGHT * 0.66666
+export const VERTICAL_OFFSET = FLAP_HEIGHT * 0.1
 
-export const splitFlapCharacters: string[] = [
+export const CHARS: string[] = [
   " ", // Blank space
   "A",
   "B",
@@ -39,12 +40,22 @@ export const splitFlapCharacters: string[] = [
   "7",
   "8",
   "9",
-  ".",
-  ",",
+  "&",
+  "+",
   ":",
   ";",
   "-",
+  "=",
   "/",
+  "$",
+  "%",
+  "#",
+  "@",
+  ".",
+  ",",
+  "'",
   "?",
   "!",
-]
+] as const
+
+export type SplitFlapCharacter = (typeof CHARS)[number]
