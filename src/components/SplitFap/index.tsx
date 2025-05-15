@@ -5,10 +5,11 @@ import { shuffle } from "./utils"
 
 const SplitFlap = ({ char }: { char: SplitFlapCharacter }) => {
   const shuffledChars = shuffle(CHARS)
+  // const shuffledChars = CHARS
   const index = shuffledChars.indexOf(char.toUpperCase())
   const arr = shuffledChars.slice(0, index).reverse()
   return (
-    <View style={{ height: FLAP_HEIGHT, width: FLAP_WIDTH }}>
+    <View style={styles.container}>
       {arr.map((item, i) => {
         return (
           <SplitFlapBase
@@ -24,6 +25,8 @@ const SplitFlap = ({ char }: { char: SplitFlapCharacter }) => {
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: { height: FLAP_HEIGHT, width: FLAP_WIDTH },
+})
 
 export default SplitFlap

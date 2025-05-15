@@ -8,15 +8,13 @@ import Animated, {
   withDelay,
   withTiming,
 } from "react-native-reanimated"
-import { FLAP_HEIGHT, FLAP_WIDTH, VERTICAL_OFFSET } from "./constants"
+import { DURATION, FLAP_HEIGHT, FLAP_WIDTH, VERTICAL_OFFSET } from "./constants"
 type SplitFlapBaseProps = {
   char: string
   nextChar: string
   index: number
   totalSplitFlaps: number
 }
-
-const DURATION = 100
 
 const SplitFlapBase = ({
   char,
@@ -65,7 +63,7 @@ const SplitFlapBase = ({
 
   useEffect(() => {
     rotateXTop.value = withDelay(
-      DURATION * (totalSplitFlaps - index),
+      DURATION * (totalSplitFlaps - 1 - index),
       withTiming(
         -180,
         {

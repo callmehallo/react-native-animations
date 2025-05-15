@@ -1,6 +1,7 @@
 export const FLAP_HEIGHT = 60
-export const FLAP_WIDTH = FLAP_HEIGHT * 0.66666
+export const FLAP_WIDTH = FLAP_HEIGHT * 0.85
 export const VERTICAL_OFFSET = FLAP_HEIGHT * 0.1
+export const DURATION = 100
 
 export const CHARS: string[] = [
   " ", // Blank space
